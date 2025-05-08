@@ -23,7 +23,7 @@ interface AuthContextProps {
 const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
 // Azure API endpoints
-const AZURE_AUTH_API = import.meta.env.VITE_AZURE_AUTH_API || "https://your-azure-app-service.azurewebsites.net/api/auth";
+const AZURE_AUTH_API = import.meta.env.VITE_AZURE_AUTH_API || "https://snapshare-api-d4eae7gwe4f5d5gt.uksouth-01.azurewebsites.net/api/auth";
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
