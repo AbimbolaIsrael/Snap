@@ -8,7 +8,13 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── Middlewares ─────────────────────────────────────────────────────────────
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:8080',
+    'https://nice-beach-0856e2d03.6.azurestaticapps.net'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
